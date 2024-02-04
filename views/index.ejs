@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+
+<main id="index-main">
+  <% if(blogs.length===0){ %>
+  <!-- if blogs[] is empty -->
+  <h1>Blogs you create will be shown here</h1>
+  <% } else {%>
+  <!-- if blogs[] is not empty -->
+  <h1>My Blogs</h1>
+  <!-- cards deck -->
+  <div class="cards-deck">
+    <% for(let i in blogs) {%>
+    <!-- individual card -->
+    <div class="card">
+      <div class="preview">
+        <h1><%= blogs[i] %></h1>
+      </div>
+      <div class="button-box">
+        <form action="/open" method="post">
+          <input type="hidden" name="index" value="<%= i %>" />
+          <button type="submit" class="open">Open</button>
+        </form>
+        <form action="/delete" method="post">
+          <input type="hidden" name="index" value="<%= i %>" />
+          <button type="submit" class="delete">Delete</button>
+        </form>
+      </div>
+    </div>
+    <!-- individual card end -->
+
+    <% } %>
+  </div>
+  <!-- cards deck end -->
+
+  <% } %>
+  <!-- if blogs[] not empty end -->
+</main>
+
+<%- include("partials/footer.ejs") %>

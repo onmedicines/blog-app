@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Serif+Display:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,200&family=Poppins:wght@100;200;400;500&display=swap");
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
+:root {
+  --dm-serif: "DM Serif Display", serif;
+  --noto-serif: "Noto Serif Display", serif;
+  --poppins: "Poppins", sans-serif;
+
+  --text: rgb(181, 218, 221);
+  --bg-main: #059292;
+  --bg-sub: #0f6464;
+  --bg-sub-darker: #074949;
+  --bg-hover: #82d5d53e;
+  --orange-bg: rgb(200, 86, 38);
+  --orange-bg-dark: rgb(255, 68, 0);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  font-family: var(--noto-serif);
+}
+
+nav {
+  background-color: var(--bg-main);
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 18fr 3fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1.5rem;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    button {
+      background-color: var(--bg-main);
+      border: 2px solid var(--bg-sub-darker);
+      font-weight: 500;
+      font-size: 1rem;
+      border-radius: 2rem;
+      padding: 0.5rem 1rem;
+      transition: all 250ms ease-in-out;
+    }
+    button:hover {
+      background-color: var(--bg-sub);
+    }
+    .create {
+      border: none;
+      background-color: var(--orange-bg);
+    }
+    .create:hover {
+      background-color: var(--orange-bg-dark);
+    }
+  }
+}
+
+#index-main {
+  min-height: 85vh;
+  background-color: var(--bg-sub);
+  padding: 1rem 2rem;
+  h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .cards-deck {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    .card {
+      transition: all 200ms ease-in-out;
+      background-color: var(--bg-sub);
+      border-radius: 1rem;
+      max-height: 20rem;
+      min-height: 5rem;
+      min-width: 12rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 2rem 1.5rem 2rem;
+      .preview {
+        background-color: var(--bg-sub-darker);
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: 0.5rem;
+        text-align: left;
+        width: 20rem;
+        height: 15rem;
+        overflow: hidden;
+      }
+      .button-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 90%;
+        margin-top: 1rem;
+        button {
+          color: beige;
+          background-color: var(--bg-sub);
+          border: 2px solid var(--bg-sub-darker);
+          padding: 0.5rem 1.25rem;
+          border-radius: 1rem;
+          transition: all 250ms ease-in-out;
+        }
+        button:hover {
+          background-color: #074949;
+        }
+      }
+    }
+  }
+}
+#create-main {
+  min-height: 85vh;
+  background-color: var(--bg-sub);
+  padding: 1rem 2rem;
+  h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  form {
+    text-align: center;
+    textarea {
+      resize: none;
+      width: 80%;
+      background-color: var(--bg-sub-darker);
+      min-height: 20rem;
+      border: none;
+      border-radius: 1.5rem;
+      outline: none;
+      padding: 2rem;
+      font-size: larger;
+      font-weight: 500;
+      font-family: var(--poppins);
+    }
+    .create-button-box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem 20rem 0;
+      button {
+        background-color: var(--bg-sub);
+        border: 2px solid var(--bg-sub-darker);
+        padding: 0.75rem 1.5rem;
+        border-radius: 2rem;
+        font-size: 1rem;
+        transition: all 250ms ease-in-out;
+      }
+      button:hover {
+        background-color: var(--bg-sub-darker);
+      }
+      .create {
+        border: none;
+        background-color: var(--orange-bg);
+      }
+      .create:hover {
+        background-color: var(--orange-bg-dark);
+      }
+    }
+  }
+}
+#view-main {
+  min-height: 85vh;
+  background-color: var(--bg-sub);
+  padding: 1rem 2rem;
+  text-align: center;
+  h1 {
+    padding-bottom: 1rem;
+  }
+  .blog-box {
+    margin: 0 10rem;
+    background-color: var(--bg-sub-darker);
+    min-height: 20rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    p {
+      font-size: larger;
+      font-weight: 500;
+      font-family: var(--poppins);
+    }
+  }
+  form {
+    button {
+      margin-top: 1.5rem;
+      background-color: var(--bg-sub);
+      border: none;
+      border-radius: 2rem;
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--bg-sub-darker);
+      transition: all 250ms ease-in-out;
+    }
+    button:hover {
+      background-color: var(--bg-sub-darker);
+    }
+  }
+}
+
+footer {
+  background-color: var(--bg-sub);
+  height: 5vh;
+  h1 {
+    font-size: 0.75rem;
+    color: var(--bg-main);
+  }
+}
